@@ -1,0 +1,9 @@
+dlp_service_kvps:
+  name: dlp_service_kvps
+  branch: develop
+dlp_service_components:
+  name: dlp_service_components
+  branch: develop
+dlp_service_schema:
+  name: dlp_service_schema
+  branch: develop

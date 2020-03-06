@@ -1,0 +1,6 @@
+{
+  "command": "dlp-gateway-command:4002",
+  "query": "dlp-gateway-query:4001",
+  "notification": "dlp-gateway-notification:4003",
+  "assets": "dlp-gateway-assets:4016"
+}

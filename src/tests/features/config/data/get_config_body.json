@@ -1,0 +1,10 @@
+{
+  "header": {
+    "message_uuid": "test_uuid",
+    "service_uuid": "test_service_uuid",
+    "service_name": "test_service_name",
+    "flow_id": "",
+    "category": "admin_command",
+    "action": "get.config"
+  }
+}

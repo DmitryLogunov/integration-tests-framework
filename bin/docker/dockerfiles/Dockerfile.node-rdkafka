@@ -1,0 +1,29 @@
+FROM node:8-alpine
+
+RUN apk update && \
+    apk --no-cache add \
+    bash \
+    g++ \
+    ca-certificates \
+    lz4-dev \
+    musl-dev \
+    cyrus-sasl-dev \
+    openssl-dev \
+    make \
+    python \
+    git \
+    openssh \
+    yarn --repository http://dl-3.alpinelinux.org/alpine/edge/community/ --allow-untrusted
+
+RUN apk add --no-cache --virtual .build-deps gcc zlib-dev libc-dev bsd-compat-headers py-setuptools bash
+
+# Create app directory
+RUN mkdir -p /usr/src/app
+
+# Move to the app directory
+WORKDIR /usr/src/app
+
+RUN echo '{}' >> ./package.json
+
+# Install node-rdkafka
+RUN yarn add node-rdkafka

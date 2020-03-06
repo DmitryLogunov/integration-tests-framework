@@ -1,0 +1,32 @@
+Feature: As a QA engineer I'd like to
+  check um service manages a user in a right way
+
+  Scenario: Add a user
+    When add a random user into the system
+    Then a user has been added
+
+  Scenario: Delete a user
+    When add a random user into the system
+    Then a user has been added
+    Then delete a user
+
+  Scenario: Deactivate a user
+    When add a random user into the system
+    Then a user has been added
+    Then deactivate a user
+    Then activate a user
+
+  Scenario: Update an email
+    When add a random user into the system
+    Then a user has been added
+    Then update an email
+
+  Scenario: Reset a password
+    When add a random user into the system
+    Then a user has been added
+    When a user resets his password
+
+  Scenario: Send verification email
+    When add a random user into the system
+    Then a user has been added
+    Then send verification email

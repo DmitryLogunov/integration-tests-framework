@@ -1,0 +1,43 @@
+- feature:
+    title: 'Command-gateway tests'
+    required_services: 'cg'
+    scenarios:
+    - scenario: 'Send a command using wrong auth token'
+      stages:
+      - production: 'true'
+      steps:
+      - when: 'send a command using wrong auth token'
+
+    - scenario: 'Send a command into non-existing topic'
+      stages:
+      - production: 'true'
+      steps:
+      - when: 'send a command into non-existing topic'
+
+    - scenario: 'Get authenticated using wrongs creds'
+      steps:
+      - when: 'try to login using wrong creds'
+
+    - scenario: 'Get authenticated using wrongs password'
+      steps:
+      - when: 'try to login using wrong password'
+
+    - scenario: 'Send valid command Halo'
+      stages:
+      - production: 'true'
+      steps:
+      - when: 'Halo command: should get response OK if we use valid access token'
+
+    - scenario: 'Send valid command Logflush'
+      stages:
+      - production: 'true'
+      steps:
+      - when: 'Logflush command: should get response OK if we use valid access token'
+
+    - scenario: 'Send not valid command Logflush'
+      stages:
+      - production: 'true'
+      steps:
+      - when: 'NOT valid Logflush command: should get response Error NOT_VALID_COMMAND if we use valid access token'
+      - when: 'Test when'
+      - then: 'Test then'

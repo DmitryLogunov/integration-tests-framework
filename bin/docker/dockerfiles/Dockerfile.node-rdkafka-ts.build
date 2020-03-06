@@ -1,0 +1,14 @@
+FROM node-rdkafka
+
+# Set app directory
+WORKDIR /usr/src/app
+
+# Create install.sh script
+RUN echo '{"config": {"unsafe-perm":true } }' >> ~/.npmrc && \
+    mkdir ~/.ssh && \
+    echo "chmod -R 600 ~/.ssh/ && chown -R root ~/.ssh/ && ssh -o 'StrictHostKeyChecking=no' git@github.com " >> ~/install.sh && \
+    echo "~/build/install-dependencies.sh" >> ~/install.sh && \
+    echo "yarn build" >> ~/install.sh && \
+    chmod +x ~/install.sh
+
+CMD ~/install.sh

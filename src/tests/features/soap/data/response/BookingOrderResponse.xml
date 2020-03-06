@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:tns1="http://Cgli.types.soap.webservices"
+>
+    <soap:Body>
+        <tns1:ValidateBookingsResponse xmlns:tns1="http://Cgli.types.soap.webservices"
+        >
+            <tns1:ValidateBookingsReturn>
+                <tns1:BatchId>b5c413f3-7dc9-4675-9a86-2faeb3324f77</tns1:BatchId>
+                <tns1:ErrorDescription>N/A</tns1:ErrorDescription>
+                <tns1:Success>true</tns1:Success>
+                <tns1:ValidateBookingsResponseItems>
+                    <tns1:ValidateBookingsResponseItems>
+                        <tns1:ValidationErrors></tns1:ValidationErrors>
+                        <tns1:salesorder>106543906</tns1:salesorder>
+                        <tns1:salesorderitem>1010</tns1:salesorderitem>
+                        <tns1:valid>true</tns1:valid>
+                    </tns1:ValidateBookingsResponseItems>
+                </tns1:ValidateBookingsResponseItems>
+                <tns1:ValidateBookingsResponseItems>
+                    <tns1:ValidateBookingsResponseItems>
+                        <tns1:ValidationErrors></tns1:ValidationErrors>
+                        <tns1:salesorder>106543906</tns1:salesorder>
+                        <tns1:salesorderitem>1020</tns1:salesorderitem>
+                        <tns1:valid>true</tns1:valid>
+                    </tns1:ValidateBookingsResponseItems>
+                </tns1:ValidateBookingsResponseItems>
+                <tns1:ValidateBookingsResponseItems>
+                    <tns1:ValidateBookingsResponseItems>
+                        <tns1:ValidationErrors></tns1:ValidationErrors>
+                        <tns1:salesorder>106543906</tns1:salesorder>
+                        <tns1:salesorderitem>1030</tns1:salesorderitem>
+                        <tns1:valid>true</tns1:valid>
+                    </tns1:ValidateBookingsResponseItems>
+                </tns1:ValidateBookingsResponseItems>
+            </tns1:ValidateBookingsReturn>
+        </tns1:ValidateBookingsResponse>
+    </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,13 @@
+{
+  "header": {
+    "message_uuid": "test_uuid_from_service_tests",
+    "service_uuid": "dlp-service-tests-uuid",
+    "service_name": "dlp-service-tests-name",
+    "action": "checkMqClients",
+    "category": "admin_command",
+    "flow_id": "dlp-service-tests_5ae084ad74bf7"
+  },
+  "body": {
+    "serviceUUID": "dlp-service-tests-uuid"
+  }
+}

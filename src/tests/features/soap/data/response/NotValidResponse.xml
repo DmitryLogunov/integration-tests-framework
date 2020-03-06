@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+>
+    <soap:Header>
+        <o:Security soap:mustUnderstand="1"
+                    xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                    xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <u:Timestamp u:Id="_0">
+                <u:Created>2018-09-12T13:13:58Z</u:Created>
+                <u:Expires>2018-09-12T13:23:58Z</u:Expires>
+            </u:Timestamp>
+        </o:Security>
+    </soap:Header>
+    <soap:Body>
+        <soap:Fault>
+            <faultcode>500</faultcode>
+            <faultstring>Invalid XML</faultstring>
+            <detail>Error: Non-whitespace before first tag.Line: 0Column: 1Char: N</detail>
+        </soap:Fault>
+    </soap:Body>
+</soap:Envelope>

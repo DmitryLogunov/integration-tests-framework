@@ -1,0 +1,93 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="https://api.cityandguilds.com"
+                  xmlns:ns0="http://Cgli.types.soap.webservices">
+    <soapenv:Header>
+        <api:authToken>
+            <api:szUsername>epa.admin</api:szUsername>
+            <api:szPassword>password</api:szPassword>
+            <api:uuid/>
+            <api:id/>
+        </api:authToken>
+    </soapenv:Header>
+    <soapenv:Body>
+        <ns0:ValidateBookings>
+            <ns0:CgliBookings>
+                <ns0:assessmentid>50207961</ns0:assessmentid>
+                <ns0:assessmentobjectabr>5220-023</ns0:assessmentobjectabr>
+                <ns0:book_creation_date>2018-04-12</ns0:book_creation_date>
+                <ns0:centreid>014316</ns0:centreid>
+                <ns0:customerid>1006033</ns0:customerid>
+                <ns0:customername>The London Institute Of Technology and Sciences</ns0:customername>
+                <ns0:date_of_birth>1971-01-01</ns0:date_of_birth>
+                <ns0:enr>FKU2645</ns0:enr>
+                <ns0:examdate>2018-05-01 09:00:00</ns0:examdate>
+                <ns0:first_name>April</ns0:first_name>
+                <ns0:gender>Male</ns0:gender>
+                <ns0:last_name>One</ns0:last_name>
+                <ns0:partnerid>ST27819854</ns0:partnerid>
+                <ns0:posid>50208034</ns0:posid>
+                <ns0:posname>Level 2 (Technical) Certificate in Digital Technologies</ns0:posname>
+                <ns0:posobjectabr>5220-21</ns0:posobjectabr>
+                <ns0:salesorder>106543906</ns0:salesorder>
+                <ns0:salesorderitem>1010</ns0:salesorderitem>
+                <ns0:salesordermainitem>1000</ns0:salesordermainitem>
+                <ns0:studentid>20366564</ns0:studentid>
+                <ns0:title>N/A</ns0:title>
+                <ns0:EmployerID>180501</ns0:EmployerID>
+                <ns0:StartDate>2018-08-01</ns0:StartDate>
+                <ns0:PlannedEndDate>2018-09-01</ns0:PlannedEndDate>
+            </ns0:CgliBookings>
+            <ns0:CgliBookings>
+                <ns0:assessmentid>50207961</ns0:assessmentid>
+                <ns0:assessmentobjectabr>5220-023</ns0:assessmentobjectabr>
+                <ns0:book_creation_date>2018-04-12</ns0:book_creation_date>
+                <ns0:centreid>014316</ns0:centreid>
+                <ns0:customerid>1006033</ns0:customerid>
+                <ns0:customername>The London Institute Of Technology and Sciences</ns0:customername>
+                <ns0:date_of_birth>1972-02-02</ns0:date_of_birth>
+                <ns0:enr>FKU3067</ns0:enr>
+                <ns0:examdate>2018-05-01 09:00:00</ns0:examdate>
+                <ns0:first_name>April</ns0:first_name>
+                <ns0:gender>Male</ns0:gender>
+                <ns0:last_name>Two</ns0:last_name>
+                <ns0:partnerid>ST27819892</ns0:partnerid>
+                <ns0:posid>50208034</ns0:posid>
+                <ns0:posname>Level 2 (Technical) Certificate in Digital Technologies</ns0:posname>
+                <ns0:posobjectabr>5220-21</ns0:posobjectabr>
+                <ns0:salesorder>106543907</ns0:salesorder>
+                <ns0:salesorderitem>1020</ns0:salesorderitem>
+                <ns0:salesordermainitem>1000</ns0:salesordermainitem>
+                <ns0:studentid>20366601</ns0:studentid>
+                <ns0:title>N/A</ns0:title>
+                <ns0:EmployerID>180501</ns0:EmployerID>
+                <ns0:StartDate>2018-08-01</ns0:StartDate>
+                <ns0:PlannedEndDate>2018-09-01</ns0:PlannedEndDate>
+            </ns0:CgliBookings>
+            <ns0:CgliBookings>
+                <ns0:assessmentid>50207961</ns0:assessmentid>
+                <ns0:assessmentobjectabr>5220-023</ns0:assessmentobjectabr>
+                <ns0:book_creation_date>2018-04-12</ns0:book_creation_date>
+                <ns0:centreid>014316</ns0:centreid>
+                <ns0:customerid>1006033</ns0:customerid>
+                <ns0:customername>The London Institute Of Technology and Sciences</ns0:customername>
+                <ns0:date_of_birth>1974-04-04</ns0:date_of_birth>
+                <ns0:enr>FKU3078</ns0:enr>
+                <ns0:examdate>2018-05-01 09:00:00</ns0:examdate>
+                <ns0:first_name>April</ns0:first_name>
+                <ns0:gender>Male</ns0:gender>
+                <ns0:last_name>Three</ns0:last_name>
+                <ns0:partnerid>ST27819893</ns0:partnerid>
+                <ns0:posid>50208034</ns0:posid>
+                <ns0:posname>Level 2 (Technical) Certificate in Digital Technologies</ns0:posname>
+                <ns0:posobjectabr>5220-21</ns0:posobjectabr>
+                <ns0:salesorder>106543908</ns0:salesorder>
+                <ns0:salesorderitem>1030</ns0:salesorderitem>
+                <ns0:salesordermainitem>1000</ns0:salesordermainitem>
+                <ns0:studentid>20366602</ns0:studentid>
+                <ns0:title>N/A</ns0:title>
+                <ns0:EmployerID>180501</ns0:EmployerID>
+                <ns0:StartDate>2018-08-01</ns0:StartDate>
+                <ns0:PlannedEndDate>2018-09-01</ns0:PlannedEndDate>
+            </ns0:CgliBookings>
+        </ns0:ValidateBookings>
+    </soapenv:Body>
+</soapenv:Envelope>

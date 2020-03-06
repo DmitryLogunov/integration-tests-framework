@@ -1,0 +1,62 @@
+pipeline:
+  build-on-push-branch:
+    image: node:8-alpine
+    secrets: [ docker_username, docker_password, private_key ]
+    commands:
+      - apk update && apk add --no-cache openssh yarn git python make g++ curl bash
+      - mkdir /root/.ssh && echo "$PRIVATE_KEY" > /root/.ssh/id_rsa && chmod 0600 /root/.ssh/id_rsa
+      - ssh-keyscan -H github.com >> /root/.ssh/known_hosts
+      - npm i -g yarn-recursive
+      - git clone https://github.com/City-and-Guilds-Group/dlp-core-ci.git /root/dlp-core-ci
+      - chmod +x /root/dlp-core-ci/helpers/install-dependencies.sh
+      - export BUILD_SCRIPTS_DIR=/root/dlp-core-ci/helpers
+      - /root/dlp-core-ci/helpers/install-dependencies.sh ${DRONE_BRANCH##build\/}
+      - yarn build
+    when:
+      branch: [master, develop, build/*]
+      event: [push]
+
+  push-image-on-push-branch:
+    image: plugins/docker
+    repo: cgdlp.azurecr.io/library/dlp-service-tests-ts
+    secrets: [ docker_username, docker_password ]
+    registry: cgdlp.azurecr.io
+    tags: ${DRONE_BRANCH##build\/}
+    when:
+      branch: [master, develop, build/*]
+      event: [push]
+
+  build-on-tag:
+    image: node:8-alpine
+    secrets: [ docker_username, docker_password, private_key ]
+    commands:
+      - apk update && apk add --no-cache openssh yarn git python make g++ curl bash
+      - mkdir /root/.ssh && echo "$PRIVATE_KEY" > /root/.ssh/id_rsa && chmod 0600 /root/.ssh/id_rsa
+      - ssh-keyscan -H github.com >> /root/.ssh/known_hosts
+      - npm i -g yarn-recursive
+      - git clone https://github.com/City-and-Guilds-Group/dlp-core-ci.git /root/dlp-core-ci
+      - chmod +x /root/dlp-core-ci/helpers/install-dependencies.sh
+      - export BUILD_SCRIPTS_DIR=/root/dlp-core-ci/helpers
+      - /root/dlp-core-ci/helpers/install-dependencies.sh master
+      - yarn build
+    when:
+      event: [tag]
+
+  push-image-on-tag:
+    image: plugins/docker
+    repo: cgdlp.azurecr.io/library/dlp-service-tests-ts
+    secrets: [ docker_username, docker_password ]
+    registry: cgdlp.azurecr.io
+    tags: ${DRONE_TAG/\//-}
+    when:
+      event: [tag]
+
+  slack:
+    image: plugins/slack
+    webhook: https://hooks.slack.com/services/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
+    channel: ci
+    username: drone-ci
+    when:
+      branch: [master, develop, build/*]
+      event: [push]
+      status: [failure, success]

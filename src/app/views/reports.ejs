@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+
+<div class="container-fluid">
+
+    <!-- Main area -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Reports history
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Passed</th>
+                        <th>Failed</th>
+                        <th>Summary</th>
+                        <th>Report</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% reports.forEach((report) => { %>
+                    <tr>
+                        <td><%= report.datetimeReport %></td>
+                        <td><%= report.passed %></td>
+                        <td
+                                <% if (parseInt(report.failed) > 0) { %>
+                                style="color: red;"
+                                <% } %>
+                        >
+                            <%= report.failed %>
+                        </td>
+                        <td><%= report.summary %></td>
+                        <td><a href="/?report=<%= report.reportID %>"><img src="assets/vendor/images/doc-ico.png"></a>
+                        </td>
+                    </tr>
+                    <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.container-fluid -->
+
+<%- include('partials/footer') %>
